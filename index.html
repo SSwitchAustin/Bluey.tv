@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bluey Fan Studio | Official Layout</title>
-    <!-- Link Font Bergaya Bulat / Rounded -->
-    <link rel="stylesheet" href="https://googleapis.com">
     <style>
+        /* 1. MEMANGGIL FONT LOKAL HELLO HEADLINE */
+        @font-face {
+            font-family: 'HelloHeadline';
+            src: url('HelloHeadline.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         * {
             margin: 0;
             padding: 0;
-            box-box-sizing: border-box;
-            font-family: 'Fredoka', sans-serif;
+            box-sizing: border-box;
+            font-family: 'HelloHeadline', 'Segoe UI', sans-serif; /* Mengaktifkan font baru */
         }
 
         body {
-            background-color: #cbe3f7; /* Biru muda latar belakang khas Bluey */
+            background-color: #cbe3f7; /* Latar belakang biru muda Bluey */
             color: #2c3e6b;
             text-align: center;
             padding-bottom: 50px;
         }
 
-        /* --- 1. MENU UTAMA (CHARACTERS, WATCH, MAKE) --- */
+        /* --- MENU UTAMA (CHARACTERS, WATCH, MAKE) --- */
         .main-menu {
             display: flex;
             justify-content: center;
@@ -50,7 +56,7 @@
         }
 
         .menu-card h3 {
-            font-size: 16px;
+            font-size: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 8px;
@@ -58,18 +64,19 @@
         }
 
         .menu-card p {
-            font-size: 12px;
+            font-size: 14px;
             color: #6a7ba2;
             line-height: 1.4;
             margin-bottom: 15px;
             height: 50px;
+            font-family: 'Segoe UI', sans-serif; /* Teks penjelasan pakai font biasa agar rapi */
         }
 
         .view-all-btn {
-            background-color: #4a3b80; /* Warna ungu tombol */
+            background-color: #4a3b80;
             color: white;
             text-decoration: none;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: bold;
             text-transform: uppercase;
             padding: 8px 25px;
@@ -82,7 +89,7 @@
             transform: scale(1.05);
         }
 
-        /* --- 2. MUFFIN'S TAKEOVER (BANNER & TEXT) --- */
+        /* --- BANNER TEXT --- */
         .takeover-section {
             max-width: 800px;
             margin: 40px auto 20px auto;
@@ -90,7 +97,7 @@
         }
 
         .takeover-section h2 {
-            font-size: 32px;
+            font-size: 38px;
             color: #4a3b80;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -98,17 +105,18 @@
         }
 
         .takeover-section p {
-            font-size: 14px;
+            font-size: 16px;
             color: #4a5a80;
             line-height: 1.5;
             max-width: 600px;
             margin: 0 auto;
+            font-family: 'Segoe UI', sans-serif;
         }
 
-        /* --- 3. GRID JALUR EMAS / GALERI MUFFIN --- */
+        /* --- GRID GALERI KOTAK --- */
         .muffin-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 Kolom sesuai gambar */
+            grid-template-columns: repeat(4, 1fr);
             gap: 15px;
             max-width: 900px;
             margin: 30px auto;
@@ -118,7 +126,7 @@
         .grid-item {
             border-radius: 15px;
             overflow: hidden;
-            aspect-ratio: 1 / 1; /* Membuat kotak sempurna persegi */
+            aspect-ratio: 1 / 1;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -131,7 +139,6 @@
             transform: translateY(-5px);
         }
 
-        /* Background warna kotak-kotak galeri sesuai gambar */
         .bg-yellow { background-color: #f7e682; }
         .bg-purple { background-color: #e5b6f2; }
         .bg-green  { background-color: #a4f2b3; }
@@ -144,19 +151,17 @@
             object-fit: contain;
         }
 
-        /* Responsif untuk layar HP agar tidak sempit */
         @media (max-width: 768px) {
             .main-menu { flex-direction: column; align-items: center; }
-            .muffin-grid { grid-template-columns: repeat(2, 1fr); } /* Jadi 2 kolom di HP */
+            .muffin-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body>
 
-    <!-- BAGIAN 1: MENU UTAMA -->
+    <!-- MENU UTAMA -->
     <div class="main-menu">
         <div class="menu-card">
-            <!-- Ganti src dengan link gambar karakter milikmu jika ada -->
             <img src="https://deliveryhero.io" alt="Characters">
             <h3>Characters</h3>
             <p>Learn more about your favourite characters from the bluey world!</p>
@@ -178,21 +183,18 @@
         </div>
     </div>
 
-    <!-- BAGIAN 2: TEKS JUDUL BANNER -->
+    <!-- BANNER JUDUL -->
     <div class="takeover-section">
         <h2>Muffin's Takeover!</h2>
         <p>Muffin Mania is taking over the Bluey Website! Don't forget to check behind the doors to discover brand new Muffin surprises when you visit.</p>
     </div>
 
-    <!-- BAGIAN 3: KOTAK GALERI (GRID) -->
+    <!-- KOTAK GALERI GRID -->
     <div class="muffin-grid">
-        <!-- Baris Atas -->
         <div class="grid-item bg-yellow"><img src="https://deliveryhero.io" alt="Muffin 1"></div>
         <div class="grid-item bg-purple"><img src="https://deliveryhero.io" alt="Muffin 2"></div>
         <div class="grid-item bg-green"><img src="https://deliveryhero.io" alt="Muffin 3"></div>
         <div class="grid-item bg-pink"><img src="https://deliveryhero.io" alt="Muffin 4"></div>
-        
-        <!-- Baris Bawah -->
         <div class="grid-item bg-orange"><img src="https://deliveryhero.io" alt="Muffin 5"></div>
         <div class="grid-item bg-purple"><img src="https://deliveryhero.io" alt="Muffin 6"></div>
         <div class="grid-item bg-green"><img src="https://deliveryhero.io" alt="Muffin 7"></div>
